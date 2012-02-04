@@ -210,3 +210,6 @@ service sensord /system/bin/sensord
    oneshot
 ## LGE_CHANGE_E
 
+service setapversion /system/bin/lgapversion
+    class late_start
+    oneshot
