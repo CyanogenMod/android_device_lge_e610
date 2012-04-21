@@ -47,6 +47,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     lgapversion
 
+# Wifi
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    $(LOCAL_PATH)/prebuilt/librasdioif.ko:system/lib/modules/librasdioif.ko \
+    $(LOCAL_PATH)/prebuilt/wlan.ko:system/lib/modules/wlan.ko
+
 # HW HALS
 PRODUCT_PACKAGES += \
     libgenlock \

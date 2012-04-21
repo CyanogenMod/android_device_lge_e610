@@ -102,6 +102,47 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libchromatix_hi542_preview.so:system/lib/libchromatix_hi542_preview.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/camera.msm7x27a.so:system/lib/hw/camera.msm7x27a.so
 
+## Wifi
+PRODUCT_COPY_FILES += \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/wpa_supplicant:system/bin/wpa_supplicant \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/etc/firmware/wlan/volans/WCN1314_cfg.dat:system/etc/firmware/wlan/volans/WCN1314_cfg.dat \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/etc/firmware/wlan/volans/WCN1314_qcom_wlan_nv.bin:system/etc/firmware/wlan/volans/WCN1314_qcom_wlan_nv.bin \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/etc/firmware/wlan/volans/WCN1314_qcom_fw.bin:system/etc/firmware/wlan/volans/WCN1314_qcom_fw.bin \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/etc/firmware/wlan/volans/WCN1314_qcom_cfg.ini:system/etc/firmware/wlan/volans/WCN1314_qcom_cfg.ini
+
+# RIL
+PRODUCT_COPY_FILES += \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libwmsts.so:system/lib/libwmsts.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libwms.so:system/lib/libwms.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libwfcu.so:system/lib/libwfcu.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libwcnftm.so:system/lib/libwcnftm.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libril-qcril-hook-oem.so:system/lib/libril-qcril-hook-oem.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libril-qc-1.so:system/lib/libril-qc-1.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqueue.so:system/lib/libqueue.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqmiservices.so:system/lib/libqmiservices.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqmi.so:system/lib/libqmi.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqdp.so:system/lib/libqdp.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libqdi.so:system/lib/libqdi.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libpbmlib.so:system/lib/libpbmlib.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liboncrpc.so:system/lib/liboncrpc.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liboem_rapi.so:system/lib/liboem_rapi.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnv.so:system/lib/libnv.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libnetmgr.so:system/lib/libnetmgr.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liblgsecclk.so:system/lib/liblgsecclk.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liblgeat.so:system/lib/liblgeat.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liblge_security.so:system/lib/liblge_security.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/liblgdrm.so:system/lib/liblgdrm.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libidl.so:system/lib/libidl.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdsutils.so:system/lib/libdsutils.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdsm.so:system/lib/libdsm.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdsi_netctrl.so:system/lib/libdsi_netctrl.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libdiag.so:system/lib/libdiag.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libcm.so:system/lib/libcm.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libauth.so:system/lib/libauth.so \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/qmuxd:system/bin/qmuxd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/qmiproxy:system/bin/qmiproxy \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/netmgrd:system/bin/netmgrd
+
 EOF
 
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__VENDOR__/$VENDOR/g > ../../../vendor/$VENDOR/$DEVICE/BoardConfigVendor.mk
