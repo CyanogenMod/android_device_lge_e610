@@ -124,12 +124,89 @@ on post-fs-data
     chown system system /data/logger
     chmod 0771 /data/logger
     # Log Service [END]
+
+on boot
+    chown bluetooth bluetooth /sys/module/bluetooth_power/parameters/power
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/type
+    chown bluetooth bluetooth /sys/class/rfkill/rfkill0/state
+    chown bluetooth bluetooth /proc/bluetooth/sleep/proto
+    chown system system /sys/module/sco/parameters/disable_esco
+    chown bluetooth bluetooth /sys/module/hci_smd/parameters/hcismd_set
+    chmod 0660 /sys/module/bluetooth_power/parameters/power
+    chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
+    chmod 0660 /sys/class/rfkill/rfkill0/state
+    chmod 0660 /proc/bluetooth/sleep/proto
+    chown bluetooth bluetooth /dev/ttyHS0
+    chmod 0660 /dev/ttyHS0
+    chown bluetooth bluetooth /sys/devices/platform/msm_serial_hs.0/clock
+    chmod 0660 /sys/devices/platform/msm_serial_hs.0/clock
+    chmod 0444 /sys/devices/platform/msm_hsusb/gadget/usb_state
+
+    # Remove write permissions to video related nodes
+    chmod 0664 /sys/devices/virtual/graphics/fb1/hpd
+    chmod 0664 /sys/devices/virtual/graphics/fb1/video_mode
+    chmod 0664 /sys/devices/virtual/graphics/fb1/format_3d
+
+    # Change owner and group for media server and surface flinger
+    chown media system /sys/devices/virtual/graphics/fb1/format_3d
+
+    #For netmgr daemon to inform the USB driver of the correct transport
+    chown radio radio /sys/class/usb_composite/rmnet_smd_sdio/transport
+
+    #To allow interfaces to get v6 address when tethering is enabled
+    write /proc/sys/net/ipv6/conf/rmnet0/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet1/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet2/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet3/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet4/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet5/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet6/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet7/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio0/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio1/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio2/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio3/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio4/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio5/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
+    write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
+        write /proc/sys/vm/vfs_cache_pressure 100
+    chown system system /sys/class/input/input1/range
+    chown system system /sys/class/input/input1/bandwidth
+    chown system system /sys/class/input/input1/mode
+    chown system system /sys/class/input/input1/value
+    chown system system /sys/class/input/input1/delay
+    chown system system /sys/class/input/input1/update
+    chown system system /sys/class/input/input1/selftest
+    chown system system /sys/class/input/input1/offset_filt_x
+    chown system system /sys/class/input/input1/offset_filt_y
+    chown system system /sys/class/input/input1/offset_filt_z
+    chown system system /sys/class/input/input1/fast_calibration_x
+    chown system system /sys/class/input/input1/fast_calibration_y
+    chown system system /sys/class/input/input1/fast_calibration_z
+    chown system system /sys/class/input/input1/eeprom_writing
+    chown system system /sys/class/input/input1/softreset
+    chmod 0666 /sys/bus/i2c/drivers/proximity_gp2ap/3-0044/enable
+    chmod 0666 /sys/bus/i2c/drivers/proximity_gp2ap/5-0044/enable
+
+    chmod 0664 /sys/class/leds/lcd-backlight/alc
+    chmod 0664 /sys/class/leds/lcd-backlight/brightness
 # rmt-storage
     chown system system /sys/devices/platform/rs300000a7.65536/send_sync
     chmod 0764 /sys/devices/platform/rs300000a7.65536/send_sync
+
 
 service rmt_storage /system/bin/rmt_storage /dev/block/mmcblk0p10 /dev/block/mmcblk0p11 /dev/block/mmcblk0p17
     class core
     user root
     disabled
+
+## LGE_CHANGE_S, U0-SENSOR [seven.kim@lge.com] 2011-09-96
+# compass/accelerometer daemon for U0
+service sensord /system/bin/sensord
+#   user compass
+#   group compass misc input
+   class late_start
+   oneshot
+## LGE_CHANGE_E
 

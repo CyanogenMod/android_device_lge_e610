@@ -73,6 +73,10 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/lights.msm7x27a.so:system/lib/hw/lights.msm7x27a.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/sensors.u0.so:system/lib/hw/sensors.u0.so
 
+# Sensors daemon
+PRODUCT_COPY_FILES += \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/sensord:system/bin/sensord
+
 # EGL
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/egl/libGLESv2_adreno200.so:system/lib/egl/libGLESv2_adreno200.so \\
