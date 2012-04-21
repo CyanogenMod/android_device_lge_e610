@@ -63,6 +63,12 @@ PRODUCT_PACKAGES += \
     gps.p700 \
     audio.a2dp.default
 
+# OMX 
+PRODUCT_PACKAGES += \
+    libstagefrighthw \
+    libmm-omxcore \
+    libOmxCore
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_p700
 PRODUCT_DEVICE := p700
