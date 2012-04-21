@@ -53,6 +53,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/librasdioif.ko:system/lib/modules/librasdioif.ko \
     $(LOCAL_PATH)/prebuilt/wlan.ko:system/lib/modules/wlan.ko
 
+# BT
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/init.qcom.bt.sh:system/etc/init.qcom.bt.sh
+
 # HW HALS
 PRODUCT_PACKAGES += \
     libgenlock \
