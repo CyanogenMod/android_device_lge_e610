@@ -1,0 +1,1 @@
+dev_mount external_sd /mnt/sdcard/ auto /devices/platform/msm_sdcc.1/mmc_host

@@ -1,0 +1,16 @@
+#
+# system.prop for p700
+#
+ro.sf.hwrotation=180
+
+debug.fb.rgb565=0
+debug.sf.hw=1
+debug.enabletr=false
+debug.composition.type=mdp
+ro.opengles.version=131072
+com.qc.hardware=true
+ro.sf.compbypass.enable=0
+
+ro.sf.lcd_density=240
+
+persist.sys.use_dithering=1
