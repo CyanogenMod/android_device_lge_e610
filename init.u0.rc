@@ -11,6 +11,11 @@ on init
     mkdir /mnt/sdcard 0000 system system
     symlink /mnt/sdcard /sdcard
 
+# NFC
+    chmod 0666 /dev/pn544
+    chown nfc nfc /dev/pn544
+    setprop ro.nfc.port I2C
+
 on emmc-fs
 # mount mmc partitions
     wait /dev/block/mmcblk0p14
