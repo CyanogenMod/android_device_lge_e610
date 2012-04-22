@@ -135,7 +135,9 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libauth.so:system/lib/libauth.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/bin/qmuxd:system/bin/qmuxd \\
     vendor/__VENDOR__/__DEVICE__/proprietary/bin/qmiproxy:system/bin/qmiproxy \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/bin/netmgrd:system/bin/netmgrd
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/netmgrd:system/bin/netmgrd \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/bin/rild:system/bin/rild \\
+    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libril.so:system/lib/libril.so
 
 # OMX
 PRODUCT_COPY_FILES += \\
