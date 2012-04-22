@@ -88,12 +88,6 @@ PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libgsl.so:system/lib/libgsl.so \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libsc-a2xx.so:system/lib/libsc-a2xx.so
 
-## Audio
-PRODUCT_COPY_FILES += \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudioalsa.so:system/lib/libaudioalsa.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/libaudioeq.so:system/lib/libaudioeq.so \\
-    vendor/__VENDOR__/__DEVICE__/proprietary/lib/hw/audio.primary.msm7x27a.so:system/lib/hw/audio.primary.msm7x27a.so
-
 ## Camera
 PRODUCT_COPY_FILES += \\
     vendor/__VENDOR__/__DEVICE__/proprietary/lib/libmmjpeg.so:system/lib/libmmjpeg.so \\

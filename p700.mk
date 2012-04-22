@@ -65,7 +65,12 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm7x27a \
     copybit.msm7x27a \
     gps.p700 \
-    audio.a2dp.default
+    audio.a2dp.default \
+    audio.primary.msm7x27a \
+    audio_policy.msm7x27a
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # OMX 
 PRODUCT_PACKAGES += \

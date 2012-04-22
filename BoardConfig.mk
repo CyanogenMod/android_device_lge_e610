@@ -61,8 +61,6 @@ BOARD_EGL_CFG := device/lge/p700/egl.cfg
 
 BOARD_HAVE_BLUETOOTH := true
 
-TARGET_PROVIDES_LIBAUDIO := true
-
 # to enable the GPS HAL
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
