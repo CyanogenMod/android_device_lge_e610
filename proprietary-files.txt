@@ -7,6 +7,8 @@ lib/egl/libEGL_adreno200.so
 lib/egl/eglsubAndroid.so
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
+lib/libC2D2.so
+lib/libOpenVG.so
 lib/libgsl.so
 lib/libsc-a2xx.so
 lib/libmmjpeg.so
@@ -14,7 +16,6 @@ lib/libmmipl.so
 lib/liboemcamera.so
 lib/libchromatix_hi542_preview.so
 lib/hw/camera.msm7x27a.so
-bin/wpa_supplicant
 etc/firmware/wlan/volans/WCN1314_cfg.dat
 etc/firmware/wlan/volans/WCN1314_qcom_wlan_nv.bin
 etc/firmware/wlan/volans/WCN1314_qcom_fw.bin

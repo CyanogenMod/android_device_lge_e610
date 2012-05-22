@@ -27,6 +27,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/AudioFilter.csv:system/etc/AudioFilter.csv
 
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 $(call inherit-product, build/target/product/full.mk)
 
 # Permission files
@@ -69,9 +72,6 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.primary.msm7x27a \
     audio_policy.msm7x27a
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
 
 # OMX 
 PRODUCT_PACKAGES += \
