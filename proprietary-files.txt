@@ -8,6 +8,7 @@ lib/egl/eglsubAndroid.so
 etc/firmware/yamato_pfp.fw
 etc/firmware/yamato_pm4.fw
 lib/libC2D2.so
+lib/libc2d2_z180.so
 lib/libOpenVG.so
 lib/libgsl.so
 lib/libsc-a2xx.so
