@@ -1,4 +1,4 @@
-import init.u0.usb.rc
+import init.m4.usb.rc
 
 on init
     export EXTERNAL_STORAGE /storage/sdcard0
@@ -177,23 +177,22 @@ on boot
     write /proc/sys/net/ipv6/conf/rmnet_sdio6/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_sdio7/accept_ra 2
     write /proc/sys/vm/vfs_cache_pressure 100
-    chown system system /sys/class/input/input1/range
-    chown system system /sys/class/input/input1/bandwidth
-    chown system system /sys/class/input/input1/mode
-    chown system system /sys/class/input/input1/value
-    chown system system /sys/class/input/input1/delay
-    chown system system /sys/class/input/input1/update
-    chown system system /sys/class/input/input1/selftest
-    chown system system /sys/class/input/input1/offset_filt_x
-    chown system system /sys/class/input/input1/offset_filt_y
-    chown system system /sys/class/input/input1/offset_filt_z
-    chown system system /sys/class/input/input1/fast_calibration_x
-    chown system system /sys/class/input/input1/fast_calibration_y
-    chown system system /sys/class/input/input1/fast_calibration_z
-    chown system system /sys/class/input/input1/eeprom_writing
-    chown system system /sys/class/input/input1/softreset
-    chmod 0666 /sys/bus/i2c/drivers/proximity_gp2ap/3-0044/enable
-    chmod 0666 /sys/bus/i2c/drivers/proximity_gp2ap/5-0044/enable
+    chown system system /sys/class/input/input3/range
+    chown system system /sys/class/input/input3/bandwidth
+    chown system system /sys/class/input/input3/mode
+    chown system system /sys/class/input/input3/value
+    chown system system /sys/class/input/input3/delay
+    chown system system /sys/class/input/input3/update
+    chown system system /sys/class/input/input3/selftest
+    chown system system /sys/class/input/input3/offset_filt_x
+    chown system system /sys/class/input/input3/offset_filt_y
+    chown system system /sys/class/input/input3/offset_filt_z
+    chown system system /sys/class/input/input3/fast_calibration_x
+    chown system system /sys/class/input/input3/fast_calibration_y
+    chown system system /sys/class/input/input3/fast_calibration_z
+    chown system system /sys/class/input/input3/eeprom_writing
+    chown system system /sys/class/input/input3/softreset
+    chown system system /sys/devices/platform/i2c-gpio.4/i2c-4/4-0044/enable
 
     chmod 0664 /sys/class/leds/lcd-backlight/alc
     chown system system /sys/class/leds/lcd-backlight/alc
