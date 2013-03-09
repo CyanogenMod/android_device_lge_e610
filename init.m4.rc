@@ -278,17 +278,17 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
     oneshot
 
 service qmiproxy /system/bin/qmiproxy
-    class late_start
+    class core
     user radio
     group radio
 
 service qmuxd /system/bin/qmuxd
-    class late_start
+    class core
     user radio
     group radio
 
 service netmgrd /system/bin/netmgrd
-    class late_start
+    class core
 
 service hciattach /system/bin/logwrapper /system/bin/sh /system/etc/init.qcom.bt.sh
     class late_start
