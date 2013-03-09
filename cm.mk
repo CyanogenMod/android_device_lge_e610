@@ -20,7 +20,7 @@ PRODUCT_VERSION_DEVICE_SPECIFIC :=
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := e610
 
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=u0_open_eu BUILD_FINGERPRINT=lge/u0_open_eu/u0:4.0.3/IML74K/lge610-V10a.20120418.144808:user/release-keys PRIVATE_BUILD_DESC="u0_open_eu-user 4.0.3 IML74K lge610-V10a.20120418.144808 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m4_open_eu BUILD_FINGERPRINT=lge/m4_open_eu/m4:4.0.3/IML74K/lge610-V10a.20121008.170544:user/release-keys PRIVATE_BUILD_DESC="m4_open_eu-user 4.0.3 IML74K lge610-V10a.20121008.170544 release-keys"
 
 # Enable Torch
 #PRODUCT_PACKAGES += Torch

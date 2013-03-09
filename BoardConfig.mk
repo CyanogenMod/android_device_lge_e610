@@ -31,7 +31,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 TARGET_KERNEL_CONFIG := cyanogenmod_m4_defconfig
 TARGET_PREBUILT_KERNEL := device/lge/e610/kernel
-TARGET_KERNEL_SOURCE := kernel/lge/p700
+TARGET_KERNEL_SOURCE := kernel/lge/msm7x27a-common
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
 
 BOARD_HAS_NO_SELECT_BUTTON := true
