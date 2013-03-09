@@ -304,3 +304,10 @@ service sdcard /system/bin/sdcard /data/media 1023 1023
 on property:dev.bootcomplete=1
    start setapversion
    class_start late_start
+
+service charger /charger
+    class charger
+    user root
+    group root 
+    oneshot
+

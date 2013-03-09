@@ -74,7 +74,9 @@ PRODUCT_PACKAGES += \
     power.e610 \
     audio.a2dp.default \
     audio.primary.msm7x27a \
-    audio_policy.msm7x27a
+    audio_policy.msm7x27a \
+    charger \
+    charger_res_images
 
 # OMX 
 PRODUCT_PACKAGES += \
