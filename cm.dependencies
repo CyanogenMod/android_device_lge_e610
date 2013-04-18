@@ -2,7 +2,7 @@
  {
    "repository": "lge-kernel-p700",
    "target_path": "kernel/lge/msm7x27a-common",
-   "branch": "android-msm-3.0-jb"
+   "branch": "android-msm-3.4"
  },
  {
    "repository": "android_device_lge_msm7x27a-common",
