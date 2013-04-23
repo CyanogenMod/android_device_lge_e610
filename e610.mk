@@ -1,3 +1,6 @@
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
+
 $(call inherit-product, device/lge/msm7x27a-common/msm7x27a-common.mk)
 
 $(call inherit-product-if-exists, vendor/lge/e610/e610-vendor.mk)

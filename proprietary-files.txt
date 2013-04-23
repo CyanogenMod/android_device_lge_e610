@@ -1,6 +1,7 @@
 lib/hw/lights.msm7x27a.so
 lib/hw/sensors.m4.so
 bin/sensord
+bin/rmt_storage
 lib/egl/libGLESv2_adreno200.so
 lib/egl/libGLESv1_CM_adreno200.so
 lib/egl/libEGL_adreno200.so
