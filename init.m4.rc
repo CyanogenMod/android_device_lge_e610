@@ -16,4 +16,4 @@ on boot
     chown system system /sys/class/input/input3/fast_calibration_z
     chown system system /sys/class/input/input3/eeprom_writing
     chown system system /sys/class/input/input3/softreset
-    chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable
+    chown system system /sys/devices/platform/i2c-gpio.4/i2c-4/4-0044/enable
