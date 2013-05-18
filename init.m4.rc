@@ -17,3 +17,8 @@ on boot
     chown system system /sys/class/input/input3/eeprom_writing
     chown system system /sys/class/input/input3/softreset
     chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable
+
+on post-fs-data
+    ## Sensors daemon stuff
+    mkdir /data/misc/sens 2755 system compass
+
