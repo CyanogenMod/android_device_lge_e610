@@ -18,6 +18,17 @@ on boot
     chown system system /sys/class/input/input3/softreset
     chown system system /sys/devices/platform/i2c-gpio.6/i2c-6/6-0044/enable
 
+    chmod 0666 /dev/oncrpc/30000000:ddc9bd91
+    chown root.qcom_oncrpc /dev/oncrpc/30000000:ddc9bd91
+    chmod 0666 /dev/oncrpc/30000012:00040000
+    chown root.qcom_oncrpc /dev/oncrpc/30000012:00040000
+    chmod 0666 /dev/oncrpc/30000003:febcbbaf
+    chown root.qcom_oncrpc /dev/oncrpc/30000003:febcbbaf
+    chmod 0666 /dev/oncrpc/3000000e:00090000
+    chown root.qcom_oncrpc /dev/oncrpc/3000000e:00090000
+    chmod 0666 /dev/oncrpc/30000095:f227e1e3
+    chown root.qcom_oncrpc /dev/oncrpc/30000095:f227e1e3
+
 on post-fs-data
     ## Sensors daemon stuff
     mkdir /data/misc/sens 2755 system compass
