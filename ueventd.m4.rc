@@ -179,5 +179,11 @@
 ## GPS
 /dev/oncrpc/00000000:0    0660  system       qcom_oncrpc
 /dev/oncrpc/3000008c:00050000 0660   system       qcom_oncrpc
+# ril permissions for e612
+/dev/oncrpc/30000000:ddc9bd91   0666   root     qcom_oncrpc
+/dev/oncrpc/30000012:00040000   0666   root     qcom_oncrpc
+/dev/oncrpc/30000003:febcbbaf   0666   root     qcom_oncrpc
+/dev/oncrpc/3000000e:00090000   0666   root     qcom_oncrpc
+/dev/oncrpc/30000095:f227e1e3   0666   root     qcom_oncrpc
 
 /dev/media*               0660   system     camera
