@@ -7,7 +7,6 @@ TARGET_BOOTLOADER_BOARD_NAME := e610
 BOARD_KERNEL_CMDLINE := androidboot.hardware=m4 lge.signed_image=false
 
 TARGET_KERNEL_CONFIG := cyanogenmod_m4_defconfig
-TARGET_PREBUILT_KERNEL := device/lge/e610/kernel
 
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := e610
 
