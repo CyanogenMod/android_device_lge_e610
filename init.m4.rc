@@ -22,3 +22,9 @@ on post-fs-data
     ## Sensors daemon stuff
     mkdir /data/misc/sens 2755 system compass
 
+service sensord /system/bin/sensord
+    user system
+    group compass misc input
+    class core
+    oneshot
+
